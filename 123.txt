@@ -1,0 +1,82 @@
+Z1: EIN | SWEI | DREI | VIER | FUNF | SECHS | SIEBEN | ACHT | NEUN;
+Z2: ZEHN | ELF | ZWOLF;
+Z3: DREI | VIER | FUNF | SECH | SIEB | ACHT | NEUN;
+Z4: ZWAN | VIER | FUNF | SECH | SIEB | ACHT | NEUN;
+Z5: HUNDERT;
+Z6: TAUSEND;
+drei: DREI;
+zehn: ZEHN;
+zig: ZIG;
+ssig: SSIG;
+und: UND;
+
+EIN ZWEI DREI VIER FUNF SECHS SIEBEN ACHT NEUN ZEHN ELF ZWOLF ZWAN SECH SIEB HUNDERT TAUSEND ZIG SSIG UND
+// 
+
+Z2: Z3 zehn
+Z7: Z4 zig
+Z7: drei ssig
+Z8: U Z7;
+Z9: Z1 Z5
+Z10: Z2 Z5
+Z11: (Z5|Z9) (Z1|Z2|Z7|Z8)
+Z12: Z10 (Z1|Z2|Z7|Z8)
+Z13: (Z1|Z2|Z7|Z8|Z9|Z11) Z6
+Z14: (Z6|Z13) (Z1|Z2|Z7|Z8|Z9|Z11)
+U: Z1 und
+
+// 
+
+Z2: Z3 zehn;
+Z7: Z4 zig;
+Z7: drei ssig;
+Z8: U Z7;
+Z9: Z1 Z5;
+Z10: Z2 Z5;
+Z11: C1 C2;
+Z12: Z10 C2;
+Z13: C3 Z6;
+Z14: C4 C3;
+U: Z1 und;
+
+C1: Z5|Z9;
+C2: Z1|Z2|Z7|Z8;
+C3: Z1|Z2|Z7|Z8|Z9|Z11;
+C4: Z6|Z13;
+
+
+{commands: /* empty */
+    |commands command
+    ; 
+
+command:
+    heat_switch
+    |
+    target_set
+    ;
+
+    heat_switch:
+        TOKHEAT STATE
+        {
+            printf("\tHeat turned on or off\n");
+        }
+        ;
+
+    target_set:
+        TOKTARGET TOKTEMPERATURE NUMBER
+        {
+            printf("\tTemperature set\n");
+        }
+
+
+
+
+lex german.l
+yacc -d german.y -t
+cc lex.yy.c y.tab.c -o german
+./german
+
+
+fünftausendzweihundertneunundfünfzig
+zweitausendneunhundertsechsundsiebzig
+zweihundertzweiundzwanzigtausendvierhundertsiebzehn
