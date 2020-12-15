@@ -868,7 +868,7 @@ case 21:
 /* rule 21 can match eol */
 YY_RULE_SETUP
 #line 26 "german.l"
-{return(0);};
+return NUMBEREND;{return(0);};
 	YY_BREAK
 case 22:
 YY_RULE_SETUP

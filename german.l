@@ -23,7 +23,7 @@ tausend     return TAUSEND;
 zig         return ZIG;
 ssig        return SSIG;
 und         return UND;
-"\n"         {return(0);};
+"\n"        return NUMBEREND;{return(0);};
 .           return yytext[0];
 <<EOF>>     yyterminate();
 [ \t]+      /* ignore whitespace */;

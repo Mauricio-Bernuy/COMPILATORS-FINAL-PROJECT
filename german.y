@@ -6,7 +6,7 @@ int yydebug=1;
 
 void yyerror(const char *str)
 {
-    fprintf(stderr, "error: %s\n", str);
+    fprintf(stderr, "\n\nString contains error: %s\n\n", str);
 }
 
 int yywrap()
@@ -22,11 +22,11 @@ main()
 %}
 
 %start S
-%token EIN ZWEI DREI VIER FUNF SECHS SIEBEN ACHT NEUN ZEHN ELF ZWOLF ZWAN SECH SIEB HUNDERT TAUSEND ZIG SSIG UND
+%token EIN ZWEI DREI VIER FUNF SECHS SIEBEN ACHT NEUN ZEHN ELF ZWOLF ZWAN SECH SIEB HUNDERT TAUSEND ZIG SSIG UND NUMBEREND
 %%
 
 //S: /*empty*/ | S productions {printf("S productions");};
-S: /*empty*/ | productions {printf("\n\nSUCCESS!\n\n");};
+S: /*empty*/ | productions NUMBEREND {printf("\n\nProduction reduced successfully!\n\n"); return(0);};
 //productions: Z2 | Z7 | Z8 | Z9 | Z10 | Z11 | Z12 | Z13 | Z14 | U
 productions: Z1 | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 | R10 | R11;
 

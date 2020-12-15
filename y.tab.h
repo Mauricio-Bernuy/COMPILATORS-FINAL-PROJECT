@@ -64,7 +64,8 @@ extern int yydebug;
     TAUSEND = 274,
     ZIG = 275,
     SSIG = 276,
-    UND = 277
+    UND = 277,
+    NUMBEREND = 278
   };
 #endif
 /* Tokens.  */
@@ -88,6 +89,7 @@ extern int yydebug;
 #define ZIG 275
 #define SSIG 276
 #define UND 277
+#define NUMBEREND 278
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
