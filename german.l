@@ -24,7 +24,7 @@ zig         return ZIG;
 ssig        return SSIG;
 und         return UND;
 "\n"        return NUMBEREND;{return(0);};
+[ \t]+      /* ignore whitespace */;
 .           return yytext[0];
 <<EOF>>     yyterminate();
-[ \t]+      /* ignore whitespace */;
 %%

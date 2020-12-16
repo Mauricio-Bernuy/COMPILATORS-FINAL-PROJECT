@@ -362,8 +362,8 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[80] =
     {   0,
-        0,    0,   25,   22,   22,   21,   22,   22,   22,   22,
-       22,   22,   22,   22,   22,   22,   22,   23,    0,    0,
+        0,    0,   25,   23,   22,   21,   23,   23,   23,   23,
+       23,   23,   23,   23,   23,   23,   23,   22,    0,    0,
         0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
         0,    0,    0,    0,    0,    0,    1,   11,    0,    0,
         0,    0,    0,    0,    0,   20,    0,    0,   18,    0,
@@ -873,16 +873,16 @@ return NUMBEREND;{return(0);};
 case 22:
 YY_RULE_SETUP
 #line 27 "german.l"
-return yytext[0];
-	YY_BREAK
-case YY_STATE_EOF(INITIAL):
-#line 28 "german.l"
-yyterminate();
+/* ignore whitespace */;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
+#line 28 "german.l"
+return yytext[0];
+	YY_BREAK
+case YY_STATE_EOF(INITIAL):
 #line 29 "german.l"
-/* ignore whitespace */;
+yyterminate();
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
