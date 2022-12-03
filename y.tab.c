@@ -81,11 +81,12 @@ int yywrap()
 
 main()
 {
+    printf("\nInput a number in German: ");
     return(yyparse());
 }
 
 
-#line 89 "y.tab.c" /* yacc.c:339  */
+#line 90 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -182,7 +183,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 186 "y.tab.c" /* yacc.c:358  */
+#line 187 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -481,16 +482,16 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    28,    28,    28,    29,    30,    30,    30,    30,    30,
-      30,    30,    30,    30,    30,    30,    30,    30,    33,    34,
-      35,    36,    37,    38,    39,    40,    41,    42,    43,    46,
-      46,    46,    46,    46,    46,    46,    46,    46,    47,    47,
-      47,    48,    48,    48,    48,    48,    48,    48,    49,    49,
-      49,    49,    49,    49,    49,    50,    51,    52,    53,    54,
-      55,    56,    59,    60,    60,    61,    62,    63,    63,    64,
-      65,    66,    67,    68,    69,    70,    71,    73,    73,    74,
-      74,    74,    74,    75,    75,    75,    75,    75,    75,    76,
-      76
+       0,    29,    29,    29,    30,    31,    31,    31,    31,    31,
+      31,    31,    31,    31,    31,    31,    31,    31,    34,    35,
+      36,    37,    38,    39,    40,    41,    42,    43,    44,    47,
+      47,    47,    47,    47,    47,    47,    47,    47,    48,    48,
+      48,    49,    49,    49,    49,    49,    49,    49,    50,    50,
+      50,    50,    50,    50,    50,    51,    52,    53,    54,    55,
+      56,    57,    60,    61,    61,    62,    63,    64,    64,    65,
+      66,    67,    68,    69,    70,    71,    72,    74,    74,    75,
+      75,    75,    75,    76,    76,    76,    76,    76,    76,    77,
+      77
 };
 #endif
 
@@ -1339,19 +1340,19 @@ yyreduce:
   switch (yyn)
     {
         case 3:
-#line 28 "german.y" /* yacc.c:1646  */
-    {printf("\nInput any number in German: ");}
-#line 1345 "y.tab.c" /* yacc.c:1646  */
+#line 29 "german.y" /* yacc.c:1646  */
+    {printf("\nInput another number in German: ");}
+#line 1346 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 29 "german.y" /* yacc.c:1646  */
+#line 30 "german.y" /* yacc.c:1646  */
     {printf("\nProduction reduced successfully!\n\n");}
-#line 1351 "y.tab.c" /* yacc.c:1646  */
+#line 1352 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1355 "y.tab.c" /* yacc.c:1646  */
+#line 1356 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
